@@ -14,6 +14,10 @@ have given mostly zeros for time duration, however, I noticed that linear
 searching and traversing in the array version takes a significantly longer 
 time to compute. 
 
+## Results CSV File Paths
+1. Original Array Structure: Phone Book Console Revised/cmake-build-debug/DataAnalysis.csv
+2. New Binary Search Tree structure: cmake-build-debug/DataAnalysis.csv
+
 ### Version Log
 ## 1.00 -- Initial Commit. - 04/12/2017
 
