@@ -1,6 +1,6 @@
 # assignment4: Phonebook in Binary Search Tree and Comparison
 ## Created By Kevin Tran
-## Finished Version: 1.03 - 08/11/2017
+## Finished Version: 1.01 - 06/12/2017
 ## CS300 - Assignment 4
 ## Professor Fatma Serce
 
@@ -20,9 +20,10 @@ time to compute.
 
 ### Version Log
 ## 1.00 -- Initial Commit. - 04/12/2017
+## 1.01 -- Fixed Assignment 4 for testing purposes and got clearer readings on measurements. - 06/12/2017
 
 ### Clarifications on Instructions
-#### As of 11/08/2017
+#### As of 12/06/2017
 This section is made to stipulate certain typos and confusions pertaining to the
 assignment and its instructions in 
 order to facilitate grading integrity. 

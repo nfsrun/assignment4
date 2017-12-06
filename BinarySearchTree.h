@@ -2,7 +2,7 @@
  * BinarySearchTree.h
  *
  *  Created on: Oct 30, 2017
- *  Revised on: Dec 04, 2017
+ *  Revised on: Dec 06, 2017
  *      Author: fatma.serce
  *      Edited: Kevin Tran
  *      Binary Search Tree has been revised to remove unused methods and to
@@ -30,7 +30,8 @@ template <class T>
 class BinarySearchTree{
 private:
 	node<T>* root;
-    //boolean to stop a traversing early when using the filter functionz
+
+    //boolean to stop a traversing early when using the filter functions
     bool stop=false;
     void inOrderT(node<T>*, string&, T);
 	void destroy(node<T>*);
@@ -41,6 +42,7 @@ private:
 
 public:
 	BinarySearchTree();
+    bool isEmpty();
 	string inOrder(string s="", T item = T()){
         inOrderT(this->root, s, item);
         this->stop=false;
@@ -55,16 +57,26 @@ public:
         }
         return output;
     }
+
 	~BinarySearchTree(){destroy(root);}
 };
 
+//default constructor
 template <class T>
 BinarySearchTree<T>::BinarySearchTree(){
 	root = NULL;
 }
 
+//isEmpty method checks to see if the tree's root is empty (is NULL).
+template <class T>
+bool BinarySearchTree<T>::isEmpty() {
+    return this->root==NULL;
+}
+
 //traversal will ensure that it will stop outputting more items once the item
-//has been reached. It will not print the reached item.
+//has been reached. It will not print the reached item. This utilizes an extra
+//variable not oftenly seen in Binary Tree Searching so that it can stop early
+//once it reaches a target item (this is for use in the filter function).
 template <class T>
 void BinarySearchTree<T>::inOrderT(node<T>* p, string& s, T target){
 	if(p!=NULL && stop==false){
@@ -82,6 +94,7 @@ void BinarySearchTree<T>::inOrderT(node<T>* p, string& s, T target){
 	}
 }
 
+//treeNodeCount counts the number of nodes within a tree.
 template <class T>
 int BinarySearchTree<T>::treeNodeCount(node<T>* p){
 	if(p==NULL)
@@ -90,6 +103,7 @@ int BinarySearchTree<T>::treeNodeCount(node<T>* p){
 		return 1 + treeNodeCount(p->left) + treeNodeCount(p->right);
 }
 
+//treeLeaveCount counts the number of leaves within a tree.
 template <class T>
 int BinarySearchTree<T>::treeLeaveCount(node<T>* p){
 	if(p==NULL)
@@ -100,6 +114,8 @@ int BinarySearchTree<T>::treeLeaveCount(node<T>* p){
 		return treeLeaveCount(p->left) + treeLeaveCount(p->right);
 }
 
+//destroy function destroys the data in each node and  all of its children and
+//then nullifies the pointer.
 template <class T>
 void BinarySearchTree<T>::destroy(node<T>* p){
 	if(p!= NULL){
@@ -110,6 +126,9 @@ void BinarySearchTree<T>::destroy(node<T>* p){
 	}
 }
 
+//treeInsert function goes through the nodes based on its value against other
+//nodes and slowly gets to a null spot to copy its in formation to a null leaf
+//so that null leaf can be a normal leaf.
 template <class T>
 void BinarySearchTree<T>::treeInsert(node<T>*& p, T& item){
 	if(p == NULL){
@@ -125,6 +144,9 @@ void BinarySearchTree<T>::treeInsert(node<T>*& p, T& item){
 
 }
 
+//treeSearch function traverses through the tree (in order from a node at
+//address p) to find the data in which the function is trying to find (under
+//address of item). If it finds it, it will return the template object itself.
 template <class T>
 node<T>* BinarySearchTree<T>::treeSearch(node<T>* p, T& item) {
     if (p == NULL)

@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/super/Dropbox/Bellevue College/CS300/assignment4/BinarySearchTree.h
+iostream
+-
+
+/cygdrive/c/Users/super/Dropbox/Bellevue College/CS300/assignment4/Contact.cpp
+Contact.h
+/cygdrive/c/Users/super/Dropbox/Bellevue College/CS300/assignment4/Contact.h
+iostream
+-
+
+/cygdrive/c/Users/super/Dropbox/Bellevue College/CS300/assignment4/Contact.h
+string
+-
+
+/cygdrive/c/Users/super/Dropbox/Bellevue College/CS300/assignment4/Launcher.cpp
+Contact.h
+/cygdrive/c/Users/super/Dropbox/Bellevue College/CS300/assignment4/Contact.h
+fstream
+-
+chrono
+-
+BinarySearchTree.h
+/cygdrive/c/Users/super/Dropbox/Bellevue College/CS300/assignment4/BinarySearchTree.h
+

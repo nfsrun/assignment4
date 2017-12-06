@@ -14,6 +14,8 @@
 #include "Contact.h"
 #include <iostream>
 
+//Default constructor that takes in two strings of a full name and phone number
+//and populates the contact fields
 Contact::Contact(string _name, string _phoneNumber) {
 	name = _name;
 	phoneNumber = _phoneNumber;

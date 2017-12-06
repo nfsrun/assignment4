@@ -18,7 +18,11 @@ class Contact {
 public:
     //this constructor will have default empty string parameters.
     Contact(string="", string="");
+
+    //Default destructor
     ~Contact(){};
+
+    //These methods will be explained in the Contact.cpp file
     void setPhoneNumber(string);
     void setName(string);
     string getName();

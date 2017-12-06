@@ -1,0 +1,21 @@
+New: 06/12/2017
+
+Note: After fixing and adjusting my code to count in nanoseconds, I can find a more representative time of the data. I combined both results that I received into an excel file that I put onto the root of the project folder. 
+
+A. Simple Search Operations on an array took a long time to complete (n-long  based on testing). 
+
+B. Simple Search Operations on the binary search tree went way faster and actually had one or two times where it took a fraction of a second. For this I can truely say that it was a log(N) time complexity based on graph (must expand for 100,000 sets to see its not actually constant) and testing. 
+
+C. I therefore say that Binary Search Tree would have a faster time. 
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Old: 04/12/2017
+
+Note: Everything on my times said that they are "really fast" at mostly 0 seconds. However, I do notice that the completion of the searching process that I have used for both (scanning through files and searching for each name respectively; same name generation for both systems) took different times to complete. 
+
+A. Simple Search Operations on an array took a long time to complete even though I received 0 seconds for most. 
+
+B. Simple Search Operations on the binary search tree went way faster and actually had one or two times where it took a fraction of a second. For this I can truely say that it was an O(N) or log(N) time complexity (hard to tell). 
+
+C. I therefore say that Binary Search Tree would have a faster time. 
